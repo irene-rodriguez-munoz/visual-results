@@ -1,135 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
-<title>Resultados</title>
+<title>Resultados Climáticos</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<h1>TURURURURU</h1>
+<h1>Visualización de Resultados</h1>
 </header>
 
-
-<!-- NAVBAR -->
-
+<!-- BARRA DE TABS PRINCIPAL -->
 <nav class="navbar">
-
-<a href="#evaluation">Evaluation</a>
-<a href="#downscaling">Downscaling</a>
-<a href="#applications">Applications</a>
-
+  <button class="tablink active" onclick="openTab(event,'evaluation')">Evaluation</button>
+  <button class="tablink" onclick="openTab(event,'downscaling')">Downscaling</button>
+  <button class="tablink" onclick="openTab(event,'applications')">Applications</button>
 </nav>
 
-
-
-<main>
-
-<!-- ===================== -->
-<!-- EVALUATION -->
-<!-- ===================== -->
-
-<section id="evaluation" class="page">
-
-<h2>Evaluation</h2>
-
-<div class="controls">
-
-<select>
-<option>Relative Humidity</option>
-<option>Precipitation</option>
-<option>Temperature</option>
-<option>Radiation</option>
-<option>Wind Speed</option>
-</select>
-
+<!-- PESTAÑAS -->
+<div id="evaluation" class="tabcontent">
+  <h2>Evaluación</h2>
+  <div class="dropdown">
+    <button class="dropbtn">Select Variable</button>
+    <div class="dropdown-content">
+      <a>Relative Humidity</a>
+      <a>Precipitation</a>
+      <a>Temperature</a>
+      <a>Radiation</a>
+      <a>Wind Speed</a>
+    </div>
+  </div>
+  <img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
 </div>
 
-<img
-src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</section>
-
-
-
-<!-- ===================== -->
-<!-- DOWNSCALING -->
-<!-- ===================== -->
-
-<section id="downscaling" class="page">
-
-<h2>Downscaling</h2>
-
-<div class="controls">
-
-<select>
-<option>Relative Humidity</option>
-<option>Precipitation</option>
-<option>Temperature</option>
-<option>Radiation</option>
-<option>Wind Speed</option>
-</select>
-
+<div id="downscaling" class="tabcontent">
+  <h2>Regionalización</h2>
+  <div class="dropdown">
+    <button class="dropbtn">Select Variable</button>
+    <div class="dropdown-content">
+      <a>Relative Humidity</a>
+      <a>Precipitation</a>
+      <a>Temperature</a>
+      <a>Radiation</a>
+      <a>Wind Speed</a>
+    </div>
+  </div>
+  <img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
 </div>
 
-<img
-src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+<div id="applications" class="tabcontent">
+  <h2>Aplicaciones</h2>
+  <div class="subnav">
+    <button class="apptab active" onclick="openApp(event,'seasonal')">Seasonal Forecast</button>
+    <button class="apptab" onclick="openApp(event,'aquacrop')">AquaCrop</button>
+  </div>
+  
+  <div id="seasonal" class="appcontent">
+    <div class="dropdown">
+      <button class="dropbtn">Select Variable</button>
+      <div class="dropdown-content">
+        <a>Relative Humidity</a>
+        <a>Precipitation</a>
+        <a>Temperature</a>
+        <a>Radiation</a>
+        <a>Wind Speed</a>
+      </div>
+    </div>
+    <img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+  </div>
 
-</section>
-
-
-
-<!-- ===================== -->
-<!-- APPLICATIONS -->
-<!-- ===================== -->
-
-<section id="applications" class="page">
-
-<h2>Applications</h2>
-
-
-<div class="subnav">
-
-<a href="#seasonal">Seasonal Forecast</a>
-<a href="#aquacrop">AquaCrop</a>
-
+  <div id="aquacrop" class="appcontent">
+    <img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+  </div>
 </div>
 
-
-
-<div id="seasonal" class="subpage">
-
-<select>
-
-<option>Relative Humidity</option>
-<option>Precipitation</option>
-<option>Temperature</option>
-<option>Radiation</option>
-<option>Wind Speed</option>
-
-</select>
-
-<img
-src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-
-<div id="aquacrop" class="subpage">
-
-<img
-src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-</section>
-
-</main>
-
+<script src="script.js"></script>
 </body>
 </html>
