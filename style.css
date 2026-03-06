@@ -1,0 +1,156 @@
+body{
+
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f2f6fb;
+
+}
+
+
+/* HEADER */
+
+header{
+
+background:#1e5aa8;
+color:white;
+padding:25px;
+text-align:center;
+
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+display:flex;
+justify-content:center;
+background:#2f6fb7;
+gap:30px;
+padding:12px;
+
+}
+
+.navbar a{
+
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:8px 16px;
+border-radius:5px;
+transition:0.3s;
+
+}
+
+.navbar a:hover{
+
+background:#4f8edc;
+
+}
+
+
+
+/* MAIN */
+
+main{
+
+max-width:1100px;
+margin:auto;
+padding:30px;
+
+}
+
+
+
+/* PAGES */
+
+.page{
+
+display:none;
+
+}
+
+.page:target{
+
+display:block;
+
+}
+
+/* default page */
+
+body:not(:has(:target)) #evaluation{
+
+display:block;
+
+}
+
+
+
+/* SUBNAV */
+
+.subnav{
+
+margin:20px 0;
+display:flex;
+gap:15px;
+
+}
+
+.subnav a{
+
+background:#2f6fb7;
+color:white;
+padding:8px 15px;
+border-radius:5px;
+text-decoration:none;
+
+}
+
+.subnav a:hover{
+
+background:#4f8edc;
+
+}
+
+
+
+/* SUBPAGES */
+
+.subpage{
+
+margin-top:20px;
+
+}
+
+
+
+/* CONTROLS */
+
+.controls{
+
+margin:20px 0;
+
+}
+
+select{
+
+padding:8px 12px;
+border-radius:5px;
+border:1px solid #bbb;
+font-size:15px;
+
+}
+
+
+
+/* IMAGES */
+
+img{
+
+margin-top:20px;
+width:100%;
+max-width:900px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+
+}
